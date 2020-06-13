@@ -1,0 +1,95 @@
+pi@adigotchi:~ $ sudo pwnagotchi
+sudo: unable to resolve host adigotchi: Temporary failure in name resolution
+w[2020-06-13 21:50:20,687] [INFO] Session-stats plugin loaded.
+[2020-06-13 21:50:20,690] [INFO] [update] plugin loaded.
+[2020-06-13 21:50:20,697] [INFO] [led] plugin loaded for /sys/class/leds/led0ightness
+[2020-06-13 21:50:20,706] [INFO] webcfg: Plugin loaded.
+[2020-06-13 21:50:20,703] [INFO] grid plugin loaded.
+[2020-06-13 21:50:20,700] [INFO] memtemp plugin loaded.
+^[[3~[2020-06-13 21:50:20,859] [INFO] BT-TETHER: Successfully loaded ...
+[2020-06-13 21:50:20,996] [WARNING] ui.fps is 0, the display will only updater major changes
+[2020-06-13 21:50:21,001] [INFO] initializing waveshare v2 display           2020-06-13 21:50:32,439] [INFO] [ai] loading /root/brain.json
+[2020-06-13 21:50:32,575] [INFO] -adigotchi-@2b127abe2baac91fcffab85e9089069f813ada1f07e3aace7b1e92caef487 (v1.5.3)
+[2020-06-13 21:50:32,596] [INFO] entering auto mode ...
+[2020-06-13 21:50:32,631] [INFO] [ai] bootstrapping dependencies ...
+[2020-06-13 21:50:33,369] [INFO] connecting to http://localhost:8081/api ...
+[2020-06-13 21:50:33,778] [INFO] web ui available at http://:8080/
+Unhandled exception in thread started by <bound method Server._http_serve of nagotchi.ui.web.server.Server object at 0xb1ade550>>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/web/server.py", e 49, in _http_serve
+    app.run(host=self._address, port=self._port, debug=False)
+  File "/usr/local/lib/python3.7/dist-packages/flask/app.py", line 943, in ru
+    run_simple(host, port, self, **options)
+  File "/usr/local/lib/python3.7/dist-packages/werkzeug/serving.py", line 105in run_simple
+    inner()
+  File "/usr/local/lib/python3.7/dist-packages/werkzeug/serving.py", line 100in inner
+    fd=fd,
+  File "/usr/local/lib/python3.7/dist-packages/werkzeug/serving.py", line 848n make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/usr/local/lib/python3.7/dist-packages/werkzeug/serving.py", line 740n __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python3.7/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.7/http/server.py", line 137, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.7/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+[2020-06-13 21:50:36,391] [INFO] found monitor interface: mon0
+[2020-06-13 21:50:36,407] [INFO] supported channels: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]
+[2020-06-13 21:50:36,411] [INFO] handshakes will be collected inside /root/hahakes
+[2020-06-13 21:50:41,559] [INFO] [epoch 0] duration=00:00:09 slept_for=00:00:blind=0 sad=0 bored=0 inactive=1 active=0 peers=0 tot_bond=0.00 avg_bond=0.00ps=0 missed=0 deauths=0 assocs=0 handshakes=0 cpu=100% mem=20% temperature=45eward=-0.2
+[2020-06-13 21:52:00,664] [INFO] sending association frame to dlink-5894 (e4:6f:13:38:58:94 D-Link International) on channel 6 [0 clients], -71 dBm...
+[2020-06-13 21:52:09,030] [INFO] sending association frame to KaaijWeb (00:15ASUSTek COMPUTER INC.) on channel 6 [0 clients], -91 dBm...
+[2020-06-13 21:52:16,215] [INFO] sending association frame to Linksys (80:26:-Link International) on channel 6 [0 clients], -87 dBm...
+[2020-06-13 21:52:19,577] [INFO] waiting for 5s on channel 6 ...
+^CTraceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 377, est
+    httplib_response = conn.getresponse(buffering=True)
+TypeError: getresponse() got an unexpected keyword argument 'buffering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/pwnagotchi", line 166, in <module>
+    do_auto_mode(agent)
+  File "/usr/local/bin/pwnagotchi", line 60, in do_auto_mode
+    agent.set_channel(ch)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/agent.py", line 466nel
+    self.wait_for(wait)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/automata.py", line or
+    self._view.wait(t, sleeping)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/view.py", line 2
+    self.set('face', faces.SLEEP)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/view.py", line 1
+    self._state.set(key, value)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/ui/state.py", line
+    self._listeners[key](prev, value)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/mesh/utils.py", linface_change
+    grid.set_advertisement_data(self._advertisement)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/grid.py", line 45, isement_data
+    return call("/mesh/data", obj=data)
+  File "/usr/local/lib/python3.7/dist-packages/pwnagotchi/grid.py", line 31,
+    r = requests.post(url, headers=None, json=obj, timeout=(30.0, 60.0))
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 533, in re
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 646, in se
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 449, in se
+    timeout=timeout
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 600,
+    chunked=chunked)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 380, est
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/usr/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.7/http/client.py", line 267, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
